@@ -1,0 +1,77 @@
+﻿<Page
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Learn"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="Learn.MainPage"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="900"
+      Title="MainPage">
+
+    <Grid x:Name="StartGrid" Opacity="100" Margin="2,-2,-2,2" Background="White">
+        <Grid Grid.RowSpan="17" Grid.ColumnSpan="10">
+            <Grid x:Name="MenuContentGrid">
+                <Frame x:Name="NextFrame" HorizontalAlignment="Left" Height="480" Margin="236,10,0,0" VerticalAlignment="Top" Width="654" Background="White" ContentRendered="NextFrame_ContentRendered" NavigationUIVisibility="Hidden"/>
+                <Label Content="Основы WPF" HorizontalAlignment="Left" Margin="10,28,0,0" VerticalAlignment="Top" Height="44" Width="153" FontSize="22" FontWeight="Bold"/>
+                <Label Content="Интерактивный курс" HorizontalAlignment="Left" Margin="10,13,0,0" VerticalAlignment="Top"/>
+                <Button x:Name="Start_Button" Content="К теме" HorizontalAlignment="Left" Margin="24,218,0,0" VerticalAlignment="Top" Width="152" Click="Start_Button_Click_1" Height="34">
+                    <Button.ToolTip>
+                        <ToolTip Content="Нажмите для того, чтобы перейти к выполнению темы"/>
+                    </Button.ToolTip>
+                </Button>
+                <Label x:Name="addnamelabel" Content="Введите своё имя" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top" Height="25" Width="123"/>
+                <TextBox x:Name="personName_TB" HorizontalAlignment="Left" Height="28" Margin="10,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="183" SpellCheck.IsEnabled="True"/>
+                <Label Content="Выбери тему" HorizontalAlignment="Left" Margin="10,144,0,0" VerticalAlignment="Top" Height="25" Width="96"/>
+                <ComboBox x:Name="Tb_Themes" HorizontalAlignment="Left" Margin="10,174,0,0" VerticalAlignment="Top" Width="183" Height="29">
+                    <ComboBoxItem Content="Тема 1. ВВЕДЕНИЕ В WPF И XAML" />
+                    <ComboBoxItem Content="Тема 2. КОНТЕЙНЕРЫ КОМПОНОВКИ В WPF" />
+                    <ComboBoxItem Content="Тема 3. КЛАСС APPLICATION" />
+                    <ComboBoxItem Content="Тема 4. СВОЙСТВА ЗАВИСИМОСТЕЙ" />
+                    <ComboBoxItem Content="Тема 5. КЛАССИЧЕСКИЕ ЭЛЕМЕНТЫ УПРАВЛЕНИЯ" />
+                </ComboBox>
+                <ProgressBar x:Name="ProgressBar_Main" HorizontalAlignment="Left" Height="20" Margin="12,343,0,0" VerticalAlignment="Top" Width="183">
+                    <ProgressBar.Effect>
+                        <DropShadowEffect BlurRadius="2" Opacity="0.2"/>
+                    </ProgressBar.Effect>
+                </ProgressBar>
+                <Label Content="Ваш прогресс" HorizontalAlignment="Left" Margin="63,313,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                <TextBlock x:Name="calculationProgressText" HorizontalAlignment="Left" Height="19" Margin="96,344,0,0" TextWrapping="Wrap" Text="{Binding Value, ElementName=ProgressBar_Main, StringFormat=\{0:0\}%}"  VerticalAlignment="Top" Width="19" TextAlignment="Center"/>
+                <Image HorizontalAlignment="Left" Height="19" Margin="200,344,0,0" VerticalAlignment="Top" Width="21" Source="depositphotos_101612710-stock-illustration-question-mark-icon-vector-illustration.jpg">
+                    <Image.ToolTip>
+                        <ToolTip Content="Прогресс прохождения курса"/>
+                    </Image.ToolTip>
+                </Image>
+                <Grid HorizontalAlignment="Left" Height="100" Margin="376,174,0,0" VerticalAlignment="Top" Width="100"/>
+                <Label Content="Что такое прогресс?" HorizontalAlignment="Left" Margin="45,363,0,0" VerticalAlignment="Top" Foreground="#DD2BBCFF">
+                    <Label.ToolTip>
+                        <ToolTip x:Name="progressask"/>
+                    </Label.ToolTip>
+                </Label>
+                <Button x:Name="AddName"  Content="+" HorizontalAlignment="Left" Margin="188,98,0,0" VerticalAlignment="Top" Width="48" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3" FontWeight="Bold" FontSize="20" Click="AddName_Click">
+                    <Button.ToolTip>
+                        <ToolTip Content="Добавьте имя, чтобы отслеживать свой прогресс."/>
+                    </Button.ToolTip>
+                </Button>
+                <Image x:Name="profileimg" HorizontalAlignment="Left" Height="42" Margin="10,82,0,0" VerticalAlignment="Top" Width="48" Source="53117.png" Visibility="Hidden"/>
+                <Label x:Name="profilehello" Content="Привет," HorizontalAlignment="Left" Margin="58,81,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+                <Label x:Name="profilename" Content="ADMIN" HorizontalAlignment="Left" Margin="58,98,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Visibility="Hidden"/>
+                <Border BorderBrush="#FF2196F3" BorderThickness="1" HorizontalAlignment="Left" Height="402" Margin="229,71,0,0" VerticalAlignment="Top" Width="2" Background="#FF2196F3">
+                    <Border.Effect>
+                        <DropShadowEffect Opacity="0.1"/>
+                    </Border.Effect>
+                </Border>
+                <Label x:Name="lbyourthemes" Content="0" HorizontalAlignment="Left" Margin="182,82,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Visibility="Hidden"/>
+                <Label x:Name="lbthemestext" Content="ИЗУЧЕНО ТЕМ" HorizontalAlignment="Left" Margin="156,106,0,0" VerticalAlignment="Top" FontSize="8" FontWeight="Bold" Visibility="Hidden"/>
+                <Button Content="Обновить результаты" HorizontalAlignment="Left" Margin="36,257,0,0" VerticalAlignment="Top" Width="127" FontSize="9" Height="19" FontWeight="Normal" Foreground="#FF2196F3" Background="{x:Null}" Click="Button_Click"/>
+                <Button x:Name="CheckAdwards" HorizontalAlignment="Left" Margin="18,410,0,0" VerticalAlignment="Top" Width="188" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Height="38" Click="CheckAdwards_Click">
+                    <Grid Height="22" Width="122">
+                        <Image HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="34" Source="adwards.png" Margin="-28,-4,0,-4"/>
+                        <Label Content="Рейтинг и достижения" HorizontalAlignment="Left" Margin="6,0,-14,-4" VerticalAlignment="Top" Width="130" FontSize="11" Height="26"/>
+                    </Grid>
+                </Button>
+                <materialDesign:RatingBar HorizontalAlignment="Left" Margin="45,466,0,0" VerticalAlignment="Top"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

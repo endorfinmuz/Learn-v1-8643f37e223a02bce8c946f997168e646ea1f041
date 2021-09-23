@@ -1,0 +1,19 @@
+﻿<Page x:Class="Learn.ThemesTapeData.Theme1.TH1_Tape1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Learn.ThemesTapeData.Theme1"
+      mc:Ignorable="d" 
+      d:DesignHeight="326" d:DesignWidth="625"
+      Title="TH1_Tape1">
+
+    <Grid HorizontalAlignment="Left" Height="326" VerticalAlignment="Top" Width="625" Background="White">
+        <Label Content="Что такое WPF?" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="590" Height="114" FontSize="14">
+            Windows Presentation Foundation (WPF) — это платформа пользовательского интерфейса для создания клиентских приложений для настольных систем. Платформа разработки WPF поддерживает широкий набор компонентов для разработки приложений, включая модель приложения, ресурсы, элементы управления, графику, макет, привязки данных, документы и безопасность.
+        </TextBlock>
+        <Image HorizontalAlignment="Left" Height="117" Margin="32,187,0,0" VerticalAlignment="Top" Width="263" Source="dot-net-logo.png"/>
+        <Image HorizontalAlignment="Left" Height="104" Margin="295,193,0,0" VerticalAlignment="Top" Width="293" Source="XAML-LOGO.png"/>
+    </Grid>
+</Page>

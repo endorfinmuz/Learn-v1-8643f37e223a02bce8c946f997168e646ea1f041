@@ -1,0 +1,71 @@
+﻿<Page x:Class="Learn.ThemesTapeData.Theme1.TH1_Tape5_Test"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Learn.ThemesTapeData.Theme1"
+      mc:Ignorable="d" 
+      d:DesignHeight="326" d:DesignWidth="625"
+      Title="TH1_Tape5_Test">
+
+    <Grid Background="White">
+        <Grid HorizontalAlignment="Left" Height="90" Margin="30,19,0,0" VerticalAlignment="Top" Width="562">
+            <Label Content="Перед тем как идти дальше, убедимся, что вы освоили материал" HorizontalAlignment="Left" Margin="74,53,0,0" VerticalAlignment="Top" FontSize="14"/>
+            <Label Content="Тестирование" HorizontalAlignment="Left" Margin="203,13,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="24"/>
+        </Grid>
+        <Grid Name="firstquestion" HorizontalAlignment="Left" Height="121" Margin="30,114,0,0" VerticalAlignment="Top" Width="562" Background="#FFE8E8E8" Visibility="Hidden">
+            <Grid.Effect>
+                <DropShadowEffect Opacity="0.2"/>
+            </Grid.Effect>
+            <Label Content="Что такое WPF?" HorizontalAlignment="Left" Margin="230,10,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+            <RadioButton Name="ANW1_True" GroupName="FirstQuestion" Content="Язык разметки" HorizontalAlignment="Left" Margin="61,46,0,0" VerticalAlignment="Top"/>
+            <RadioButton Name="ANW1_False1" GroupName="FirstQuestion" Content="Язык программирования" HorizontalAlignment="Left" Margin="61,75,0,0" VerticalAlignment="Top"/>
+            <RadioButton Name="ANW1_False2" GroupName="FirstQuestion" Content="Программа для дизайна" HorizontalAlignment="Left" Margin="327,46,0,0" VerticalAlignment="Top"/>
+            <RadioButton Name="ANW1_False3" GroupName="FirstQuestion" Content="Шаблон для программиста" HorizontalAlignment="Left" Margin="327,75,0,0" VerticalAlignment="Top"/>
+        </Grid>
+
+        <Grid Name="secondquestion" HorizontalAlignment="Left" Height="121" Margin="30,114,0,0" VerticalAlignment="Top" Width="562" Background="#FFE8E8E8" Visibility="Hidden">
+            <Grid.Effect>
+                <DropShadowEffect Opacity="0.2"/>
+            </Grid.Effect>
+            <Label Content="Выберите одну из особенностей WPF" HorizontalAlignment="Left" Margin="166,10,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+            <RadioButton Name="ANW2_False1" GroupName="SecondQuestion" Content="Совместим со всеми я/п" HorizontalAlignment="Left" Margin="61,46,0,0" VerticalAlignment="Top"/>
+            <RadioButton Name="ANW2_True" GroupName="SecondQuestion" Content="Выше производительность" HorizontalAlignment="Left" Margin="61,75,0,0" VerticalAlignment="Top"/>
+            <RadioButton Name="ANW2_False2" GroupName="SecondQuestion" Content="Быстрее программироват" HorizontalAlignment="Left" Margin="327,46,0,0" VerticalAlignment="Top"/>
+            <RadioButton Name="ANW2_False3" GroupName="SecondQuestion" Content="Удобнее работать с БД" HorizontalAlignment="Left" Margin="327,75,0,0" VerticalAlignment="Top"/>
+        </Grid>
+
+        <Grid Name="threequestion" HorizontalAlignment="Left" Height="121" Margin="30,114,0,0" VerticalAlignment="Top" Width="562" Background="#FFE8E8E8" Visibility="Hidden">
+            <Grid.Effect>
+                <DropShadowEffect Opacity="0.2"/>
+            </Grid.Effect>
+            <Label Content="Что можно сделать в XAML?" HorizontalAlignment="Left" Margin="186,10,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+            <RadioButton Name="ANW3_False1" GroupName="ThreeQuestion" Content="Разработать хороший функционал" HorizontalAlignment="Left" Margin="61,46,0,0" VerticalAlignment="Top"/>
+            <RadioButton Name="ANW3_False3" GroupName="ThreeQuestion" Content="Подключиться к БД" HorizontalAlignment="Left" Margin="61,75,0,0" VerticalAlignment="Top"/>
+            <RadioButton Name="ANW3_False2" GroupName="ThreeQuestion" Content="Написать код на C++" HorizontalAlignment="Left" Margin="327,46,0,0" VerticalAlignment="Top"/>
+            <RadioButton Name="ANW3_True" GroupName="ThreeQuestion" Content="Сделать графический интерфейс" HorizontalAlignment="Left" Margin="327,75,0,0" VerticalAlignment="Top"/>
+        </Grid>
+
+        <Grid Name="fourquestion" HorizontalAlignment="Left" Height="121" Margin="30,114,0,0" VerticalAlignment="Top" Width="562" Background="#FFE8E8E8" Visibility="Hidden">
+            <Grid.Effect>
+                <DropShadowEffect Opacity="0.2"/>
+            </Grid.Effect>
+            <Label Content="Молодец! Скорее узнавай результаты." HorizontalAlignment="Left" Margin="125,45,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16"/>
+
+        </Grid>
+
+        <Grid Name="resultquestion" HorizontalAlignment="Left" Height="121" Margin="30,114,0,0" VerticalAlignment="Top" Width="562" Background="#FFE8E8E8" Visibility="Hidden">
+            <Grid.Effect>
+                <DropShadowEffect Opacity="0.2"/>
+            </Grid.Effect>
+            <Label Name="AgreeQuestions" Content="Правильные ответы:" HorizontalAlignment="Left" Margin="192,24,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16"/>
+            <Label Name="ResultComment" Content="Ты отлично освоил(-а) материал!" HorizontalAlignment="Center" Margin="150,58,140,34" VerticalAlignment="Center" FontWeight="Bold" FontSize="16"/>
+
+        </Grid>
+
+        <Button x:Name="BT_1Answer" Content="Ответить" HorizontalAlignment="Left" Margin="224,247,0,0" VerticalAlignment="Top" Width="164" Click="BT_1Answer_Click" Visibility="Hidden"/>
+        <Label Name="GoodNotification" Content="Тема №2 теперь доступна к изучению!" HorizontalAlignment="Left" Margin="194,247,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="#DD00B9FF" Visibility="Hidden"/>
+        <Button Name="StartButton" Content="Погнали!" HorizontalAlignment="Left" Margin="204,147,0,0" VerticalAlignment="Top" Width="213" Height="55" Click="Button_Click"/>
+
+    </Grid>
+</Page>

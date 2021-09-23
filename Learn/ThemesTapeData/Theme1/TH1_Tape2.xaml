@@ -1,0 +1,24 @@
+﻿<Page x:Class="Learn.ThemesTapeData.Theme1.TH1_Tape2"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Learn.ThemesTapeData.Theme1"
+      mc:Ignorable="d" 
+      d:DesignHeight="326" d:DesignWidth="625"
+      Title="TH1_Tape2">
+
+    <Grid Background="White">
+        <Label Content="Особенности XAML" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="322" Height="169" FontSize="14">
+            1. Использование традиционных языков .NET-платформы;<LineBreak/>
+            2. Создание дизайна прямо в разметке без программного вмешательства;<LineBreak/> 
+            3. Независимость от разрешения экрана;<LineBreak/> 
+            4. Больше возможностей чем в WinForms;<LineBreak/> 
+            5. Хорошее взаимодействие с WinForms;<LineBreak/>
+            6. Новые возможности: мультимедиа, трехмерная графика и тд.<LineBreak/>
+        </TextBlock>
+        <Image HorizontalAlignment="Left" Height="181" Margin="337,57,0,0" VerticalAlignment="Top" Width="278" Source="Screengrab.gif"/>
+
+    </Grid>
+</Page>
